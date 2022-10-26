@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.copyright h1 {
+    font: 22px sans-serif;
+    color: #000;
+}
+.content {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.content .clickZone {
+    width: 80%;
+    height: 100%;
+    background: red;
+    cursor: pointer;
+    filter: blur(5px);
+}
+.content .results {
+    width: 20%;
+    height: 100%;
+    background: gray;
+    filter: blur(5px);
+}
+.content .results h1 {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    font: 24px sans-serif;
+}
+.content .results .record {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    font: 24px sans-serif;
+    color: #fff;
+}
+.content .results .record {
+    text-align: center;
+    padding: 10px 20px;
+    background: rgb(51, 51, 51);
+    font: 24px sans-serif;
+    color: rgb(46, 250, 0);
+}
+.content .results .title {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    font: 24px sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+.content .startPanel {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.content .startPanel h1 {
+    color: rgb(192, 236, 255);
+    text-shadow: 2px 2px 2px #000;
+}
+.content .startPanel h2 {
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 20px;
+}
+.content .startPanel h3 {
+    color: rgb(192, 236, 255);
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 20px;
+}
+.content .startAgain {
+    position: absolute;
+    right: -100%;
+    top: 10px;
+    padding: 10px;
+    background: green;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.content .startAgain h1 {
+    font: 24px sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        align-items: flex-start;
+    }
+    .copyright h1 {
+        color: #fff;
+    }
+    .content {
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .content .results {
+        order: -1;
+        width: 100%;
+        height: auto;
+    }
+    .content .clickZone {
+        width: 100%;
+        height: 100%;
+    }
+}
+
